@@ -1,0 +1,58 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 800px) {
+  :host {
+    grid-template-columns: repeat(1, 1fr);
+    height: calc(100vh- 10px);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+form {
+  display: block;
+  flex: 1;
+}
+
+.twoInOne {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+  margin: 10px;
+  outline: none;
+  padding: 9px 20px;
+  font-weight: 600;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: all ease-in 200ms;
+  font-family: Poppins;
+}
+
+.primary {
+  background-color: rgb(44, 44, 218);
+}
+
+.primary:hover {
+  box-shadow: 1px 1px 12px 1px rgb(44, 44, 218, 0.2);
+}
+
+.warning {
+  background-color: rgb(237, 186, 18);
+}
+
+.warning:hover {
+  box-shadow: 1px 1px 12px 1px rgb(237, 186, 18, 0.2);
+}
+
+.btn:disabled {
+  background-color: aliceblue;
+  box-shadow: none;
+  cursor: auto;
+}

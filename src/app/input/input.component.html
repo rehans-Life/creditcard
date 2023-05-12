@@ -1,0 +1,33 @@
+<div class="inputField">
+  <label class="label">{{ label }}</label>
+  <!-- Here we are assigning this input to the "name" field
+    that exists inside of our formGroup -->
+  <input
+    [formControl]="field"
+    class="input"
+    [ngClass]="{ 'is-danger': showErrors() }"
+  />
+
+  <!-- If the errors do exist in relation to name field then
+      we will check for errors in relation to it. -->
+  <ng-container *ngIf="showErrors()">
+    <div class="help is-danger" *ngIf="field.errors['required']">
+      Name is Required
+    </div>
+    <div class="help is-danger" *ngIf="field.errors['minlength']">
+      Minimum length of
+      {{ field.errors["minlength"].requiredLength }} is required for name field
+      but you gave
+      {{ field.errors["minlength"].actualLength }}
+    </div>
+    <div class="help is-danger" *ngIf="field.errors['maxlength']">
+      Maximum length of
+      {{ field.errors["maxlength"].requiredLength }} is required for name field
+      but you gave
+      {{ field.errors["maxlength"].actualLength }}
+    </div>
+    <div class="help is-danger" *ngIf="field.errors['pattern']">
+      Pattern Is Not Valid
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,36 @@
+.inputField {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.input {
+  outline: none;
+  padding: 8px 6px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  transition: all ease-in 200ms;
+  margin: 2px 0 0 0;
+}
+
+.input:focus {
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.is-danger {
+  border-color: rgb(243, 7, 7, 0.6);
+}
+
+.is-danger:focus {
+  box-shadow: 1px 1px 10px 1px rgb(243, 7, 7, 0.05) !important;
+}
+
+.help {
+  font-size: 12px;
+  color: rgb(243, 7, 7, 0.8);
+}
